@@ -14,7 +14,7 @@
 |------|------------------------|
 | 语言与运行时 | Java **21 LTS**（后续可跟进下一 LTS）；熟悉 `record`、模式匹配、`Virtual Thread` 等现代特性 |
 | 应用框架 | **Spring Boot 3.x**（**Spring Framework 6**、Jakarta EE 命名空间）、**Spring Web / Spring MVC** |
-| 数据访问 | **Spring Data JPA**、**Querydsl** 或原生 **JdbcClient**（按项目复杂度）；迁移工具 **Flyway** 或 **Liquibase** |
+| 数据访问 | **mybatis**、 **plus** |
 | 关系型库 | **PostgreSQL** 或 **MySQL 8**（二选一吃透即可） |
 | 缓存 | **Redis**（缓存、分布式锁、限流常用场景） |
 | API 契约 | **OpenAPI 3**（springdoc 等），与前端联调与 Mock 一致 |
