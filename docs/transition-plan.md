@@ -1,18 +1,18 @@
 # 转型计划与概念扫盲
 
-面向前端背景的 Java 全栈转型：**可兼职执行**，以下为约 **12～16 个阶段** 的粗粒度路线（节奏可按月自定）；入门与语言巩固见 [jobs.md](jobs.md)（[job-01.md](job-01.md)、[job-02.md](job-02.md)）。
+面向前端背景的 Java 全栈转型：**可兼职执行**，以下为约 **12～16 个阶段** 的粗粒度路线（节奏可按月自定）；**实操任务清单** [jobs.md](jobs.md)（**job-01**～**job-16** 与下表对应）。
 
 ## 一、转型计划（按阶段）
 
 | 阶段 | 主题 | 目标产出 |
 |------|------|----------|
-| 1～2 | Java 语言与 JVM 初印象 | 独立小程序（读写文件、HTTP）；字节码、classpath、jar；集合与 Stream、线程池入门。**任务**：[job-01.md](job-01.md)、[job-02.md](job-02.md) |
-| 3～4 | 构建工具与模块化 | 用 Maven 或 Gradle 建立多模块结构；依赖范围（compile/test/runtime）能选对 |
-| 5～7 | Spring Boot 与 Web | 可运行的 REST 服务；校验、分页、统一错误体；OpenAPI 可导出给前端 |
-| 8～9 | 数据层 | 接 PostgreSQL/MySQL；JPA 实体 + 迁移脚本（Flyway/Liquibase）；理解事务边界 |
-| 10～11 | 缓存与安全 | Redis 缓存典型场景；Spring Security 登录态或 JWT 与前端联调通 |
-| 12～13 | 消息与 resilient | 一种消息队列入门；超时、重试、幂等在接口层有意识 |
-| 14～16 | 交付与可观测 | Docker 镜像可运行；健康检查、基础指标或日志规范；一次「从前端到部署」闭环 |
+| 1～2 | Java 语言与 JVM 初印象 | 独立小程序（读写文件、HTTP）；字节码、classpath、jar；集合与 Stream、线程池。**任务**：[job-01](job-01.md)、[job-02](job-02.md) |
+| 3～4 | 构建工具与模块化 | 多模块、依赖 scope。**任务**：[job-03](job-03.md) |
+| 5～7 | Spring Boot 与 Web | REST、校验、OpenAPI。**任务**：[job-04](job-04.md)～[job-06](job-06.md) |
+| 8～9 | 数据层 | JPA、Flyway、事务。**任务**：[job-07](job-07.md)、[job-08](job-08.md) |
+| 10～11 | 缓存与安全 | Redis、Security + JWT。**任务**：[job-09](job-09.md)、[job-10](job-10.md) |
+| 12～13 | 消息与 resilient | 消息队列、超时重试幂等。**任务**：[job-11](job-11.md)、[job-12](job-12.md) |
+| 14～16 | 交付与可观测 | Docker、指标日志、K8s、全栈收口。**任务**：[job-13](job-13.md)～[job-16](job-16.md) |
 
 **贯穿整段的要求**：每完成一阶段（或每隔一段时间）把本仓库或 side project 推到 Git，并在 issue / 笔记里写一句「最大卡点与结论」。
 

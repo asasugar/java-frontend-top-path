@@ -59,4 +59,4 @@ mvn -q exec:java -Dexec.mainClass="learning.job02.Job02App"
 - **`data/input.txt` 找不到**：必须在 **`job02` 目录下**执行 `mvn exec:java`（工作目录为模块根）；或改成绝对路径 / 从 `user.dir` 拼路径并自查 `System.getProperty("user.dir")`。
 - **线程池不结束**：忘记 `shutdown` 会让 JVM 挂住；示例已在 `finally` 里关闭，改代码时注意保留。
 
-**上一项**：[job-01.md](job-01.md)　**索引**：[jobs.md](jobs.md)
+**上一项**：[job-01.md](job-01.md)　**下一项**：[job-03.md](job-03.md)　**索引**：[jobs.md](jobs.md)

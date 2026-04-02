@@ -87,4 +87,4 @@ mvn -q package
 
 **与前端差异（一句）**：Java **静态类型 + 编译期检查**，改签名问题多在编译阶段暴露。
 
-**下一项**：[job-02.md](job-02.md)　**索引**：[jobs.md](jobs.md)
+**下一项**：[job-02.md](job-02.md)　**索引**：[jobs.md](jobs.md)（共 job-01～job-16）
