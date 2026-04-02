@@ -60,6 +60,19 @@ mvn -q package
 
 阅读节奏：**2～4** 配合第 2 节；**6** 配合第 3 节；**7** 配合第 4 节；**8** 在 `mvn compile` 通过后扫一遍。
 
+### 阅读 × 前端类比
+
+| 推荐阅读条目 | 前端可类比 |
+|--------------|------------|
+| 入门 Hello World | 第一个可执行入口：`node app.js`、Vite/React 的 `main` 挂载点；`main` 是程序起点。 |
+| OOP 概念 | ES class / TS `class`：对象、引用、封装；**接口**更像「只约定形状、不管实现」的契约（接近 TS `interface`，但 Java 里实现关系更硬）。 |
+| 语言基础 | 变量、分支、循环与 JS 同构；**类型**写在源码里且编译期检查，接近 **严格 TS**，错误更早暴露。 |
+| 异常 | `try / catch / finally` 同形；差异是 Java 有 **checked exception**（调用方被迫处理或声明），前端习惯里更接近「要么 catch 要么让 Promise reject」。 |
+| 基本 I/O | Node **`fs`** / **`fs.promises`** 读写文件；`Path`、`Files` 对应路径拼接与安全读写。 |
+| HTTP Client | **`fetch`** / **axios**：发 GET、拿 body 字符串；`send` 是**阻塞**调用，像 **`await fetch` 写在 async 里**，但当前线程会卡住直到返回。 |
+| Maven 入门 | **`npm install` + `package.json` + `node_modules`**：`pom.xml` 定依赖与插件，`~/.m2/repository` 像全局缓存的依赖目录；`mvn compile` ≈ 构建产物，**fat jar** 以后再对标「单文件 bundle」。 |
+| （ bytecode，配合第 2 节任务） | **TypeScript → JS** 或 **源码 → 打包产物**：`.java` → `.class` 给 JVM 跑；改代码要 **重新编译** 才进 `target/classes`。 |
+
 ## 不求甚解（以后再啃）
 
 泛型擦除、字节码细节、GC 调参、`module-info.java`。下一阶段见 [transition-plan.md](transition-plan.md)（并发、fat jar、Spring 等）。
@@ -74,4 +87,4 @@ mvn -q package
 
 **与前端差异（一句）**：Java **静态类型 + 编译期检查**，改签名问题多在编译阶段暴露。
 
-**索引**：[jobs.md](jobs.md)
+**下一项**：[job-02.md](job-02.md)　**索引**：[jobs.md](jobs.md)

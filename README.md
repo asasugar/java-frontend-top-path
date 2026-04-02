@@ -47,7 +47,7 @@
 
 记录笔记、命令清单、Demo 模块与阶段总结；对外可作为个人转型时间线与复习索引。
 
-详细 **阶段计划与概念扫盲（前后端对照）** 见 [docs/transition-plan.md](docs/transition-plan.md)。**入门 Job 01** 见 [docs/job-01.md](docs/job-01.md)，索引 [docs/jobs.md](docs/jobs.md)，示例工程 `job01/`。
+详细 **阶段计划与概念扫盲（前后端对照）** 见 [docs/transition-plan.md](docs/transition-plan.md)。**任务** 见 [docs/jobs.md](docs/jobs.md)（`job01`、`job02`）。
 
 ---
 
