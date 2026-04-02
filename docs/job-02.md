@@ -55,6 +55,7 @@ mvn -q exec:java -Dexec.mainClass="learning.job02.Job02App"
 
 ## 排错
 
+- **`distinct()`**：按 **`equals` 判重**（`String` 即内容相同且大小写一致）；只保留每种值的第一次。前面若 **`map` 成小写**，去重是按**小写后的串**算的，`Apple` 与 `apple` 会合并成一条。
 - **`data/input.txt` 找不到**：必须在 **`job02` 目录下**执行 `mvn exec:java`（工作目录为模块根）；或改成绝对路径 / 从 `user.dir` 拼路径并自查 `System.getProperty("user.dir")`。
 - **线程池不结束**：忘记 `shutdown` 会让 JVM 挂住；示例已在 `finally` 里关闭，改代码时注意保留。
 

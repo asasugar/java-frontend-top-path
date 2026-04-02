@@ -26,19 +26,24 @@ public final class Job02App {
             while ((line = reader.readLine()) != null) {
                 lines.add(line);
             }
+            // Stream
             long distinct = lines.stream()
-                    .map(s -> s.toLowerCase(Locale.ROOT))
-                    .distinct()
-                    .count();
+                    .map(s -> s.toLowerCase(Locale.ROOT)) // 忽略大小写
+                    .distinct() // 去重
+                    .count(); // 统计数量
             System.out.println("distinct lines (ignore case): " + distinct);
         }
 
+        // 线程池
         ExecutorService pool = Executors.newFixedThreadPool(2);
+        // try-with-resources
         try {
             Future<?> f1 = pool.submit(() -> System.out.println("task1 " + Thread.currentThread().getName()));
             Future<Integer> f2 = pool.submit(() -> 1 + 2);
+            Future<Integer> f3 = pool.submit(() -> 3 + 4);
             f1.get();
             System.out.println("task2 result: " + f2.get());
+            System.out.println("task3 result: " + f3.get());
         } finally {
             pool.shutdown();
         }
