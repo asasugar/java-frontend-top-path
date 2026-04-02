@@ -4,8 +4,8 @@
 
 ## 环境验收（Job 0）
 
-- [ ] 安装 **JDK 21**（或本仓库 README 约定的 LTS），终端执行：`java -version`、`javac -version`，主版本为 **21**。
-- [ ] 安装 **Maven 3.9+**：`mvn -version`，能解析 `JAVA_HOME`。
+- [ ] 安装 **JDK 17**（或 README 约定的 LTS），终端执行：`java -version`、`javac -version`，主版本与工程一致（本仓库 `week01` 使用 **17**）。
+- [ ] 安装 **Maven 3.8+**：`mvn -version`，能解析 `JAVA_HOME`（安装说明见 [env-install-cli.md](env-install-cli.md)）。
 - [ ] IDE 任选（IDEA / VS Code + Extension Pack for Java），打开本仓库下的 `week01` 目录，能定位到主类并运行。
 
 ## Job 1：搞清「源码 → 字节码 → 运行」
@@ -59,7 +59,7 @@ mvn -q package
 | 4 | 语言基础（变量、运算符、控制流、数组） | https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html |
 | 5 | 异常 | https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html |
 | 6 | 基本 I/O（与 `Files` / `Path` 衔接） | https://docs.oracle.com/javase/tutorial/essential/io/fileio.html |
-| 7 | HTTP Client（JDK 自带） | https://docs.oracle.com/en/java/javase/21/docs/api/java.net.http/java/net/http/HttpClient.html |
+| 7 | HTTP Client（JDK 自带） | https://docs.oracle.com/en/java/javase/17/docs/api/java.net.http/java/net/http/HttpClient.html |
 | 8 | Maven 五分钟 / 入门指南 | https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html |
 
 阅读节奏：先完成 **2 → 4** 覆盖 Job 1；**6** 对照 Job 2；**7** 对照 Job 3；**8** 在跑通 `mvn compile` 后扫一遍即可。
