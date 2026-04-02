@@ -1,22 +1,22 @@
-# Day 01 — `day01` 入门（单日通关）
+# Job 01 — `job01` 入门
 
-对应总表「Java 语言与 JVM 初印象」：**工具链 + 小程序（读写文件、HTTP）+ 字节码 / classpath / jar 概念**，以下任务**一天内按序做完**即可。示例工程目录：`day01/`。
+对应总表「Java 语言与 JVM 初印象」：**工具链 + 小程序（读写文件、HTTP）+ 字节码 / classpath / jar 概念**，以下任务**按序做完**即可。示例工程目录：`job01/`。
 
 ## 1. 环境
 
-- [ ] 安装 **JDK 17**（或 README 约定 LTS），`java -version`、`javac -version` 与工程一致（本模块 `day01` 为 **17**）。
+- [ ] 安装 **JDK 17**（或 README 约定 LTS），`java -version`、`javac -version` 与工程一致（本模块 `job01` 为 **17**）。
 - [ ] 安装 **Maven 3.8+**，`mvn -version` 与 `JAVA_HOME` 正确（[env-install-cli.md](env-install-cli.md)）。
-- [ ] IDE 打开 `day01`，能运行主类 `learning.day01.Day01App`。
+- [ ] IDE 打开 `job01`，能运行主类 `learning.job01.Job01App`。
 
 ## 2. 源码 → 字节码 → 运行
 
 - [ ] 阅读约各 20 分钟：官方教程 **Hello World** + **OOP Concepts**（或中文等价）；完整链接见下文「推荐阅读」。
-- [ ] 运行 `Day01App`，确认有输出。
+- [ ] 运行 `Job01App`，确认有输出。
 - [ ] `mvn -q compile`，查看 `target/classes` 下 **`.class`**，能说明 **`.java` → 字节码 → JVM 执行**。
 
 ## 3. 文件读写（NIO.2）
 
-- [ ] 读 `Paths` / `Files` 相关代码，**改一处**：例如写到 `day01/data/`（`Files.createDirectories`）。
+- [ ] 读 `Paths` / `Files` 相关代码，**改一处**：例如写到 `job01/data/`（`Files.createDirectories`）。
 - [ ] 运行后核对磁盘文件与输出一致。
 
 ## 4. HTTP 客户端
@@ -27,8 +27,8 @@
 ## 5. classpath 与 JAR
 
 - [ ] 口述 **classpath** 含义；`mvn -q package` 后执行：
-  `java -cp target/day01-1.0.0-SNAPSHOT.jar learning.day01.Day01App`
-  主类为 **`learning.day01.Day01App`**，勿用 `groupId`。若缺 Jackson 等类 = 普通 jar 未打依赖，**预期现象**；平时用 `mvn -q exec:java`。
+  `java -cp target/job01-1.0.0-SNAPSHOT.jar learning.job01.Job01App`
+  主类为 **`learning.job01.Job01App`**，勿用 `groupId`。若缺 Jackson 等类 = 普通 jar 未打依赖，**预期现象**；平时用 `mvn -q exec:java`。
 
 ## 6. 收尾
 
@@ -37,9 +37,9 @@
 ## 命令速查
 
 ```bash
-cd day01
+cd job01
 mvn -q compile
-mvn -q exec:java -Dexec.mainClass="learning.day01.Day01App"
+mvn -q exec:java -Dexec.mainClass="learning.job01.Job01App"
 mvn -q package
 ```
 
@@ -70,8 +70,8 @@ mvn -q package
 - **mvn 非 JDK 17**：核对 `JAVA_HOME` 与 `mvn -version`。
 - **首编译慢**：拉依赖至 `~/.m2/repository`；内网配镜像。
 - **HTTP 失败**：代理 / 证书；换可浏览器访问的 JSON URL。
-- **加练**：`javap -c -p target/classes/learning/day01/Day01App.class`；`jshell` 试两行代码后 `/exit`。
+- **加练**：`javap -c -p target/classes/learning/job01/Job01App.class`；`jshell` 试两行代码后 `/exit`。
 
 **与前端差异（一句）**：Java **静态类型 + 编译期检查**，改签名问题多在编译阶段暴露。
 
-**索引**：[days.md](days.md)
+**索引**：[jobs.md](jobs.md)

@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>top.path</groupId>
-    <artifactId>day01</artifactId>
+    <artifactId>job01</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>day01</name>
+    <name>job01</name>
 
     <properties>
         <maven.compiler.release>17</maven.compiler.release>
@@ -37,7 +37,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.5.0</version>
                 <configuration>
-                    <mainClass>learning.day01.Day01App</mainClass>
+                    <mainClass>learning.job01.Job01App</mainClass>
                 </configuration>
             </plugin>
         </plugins>
