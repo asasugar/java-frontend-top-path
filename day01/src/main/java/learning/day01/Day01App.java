@@ -1,4 +1,4 @@
-package learning.week01;
+package learning.day01;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -11,13 +11,13 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public final class Week01App {
+public final class Day01App {
 
     public static void main(String[] args) throws Exception {
-        Path dir = Path.of(System.getProperty("java.io.tmpdir"), "java-frontend-top-path-week01");
+        Path dir = Path.of(System.getProperty("java.io.tmpdir"), "java-frontend-top-path-day01");
         Files.createDirectories(dir);
         Path file = dir.resolve("hello.txt");
-        String line = "hello from week01 at " + System.currentTimeMillis() + "\n";
+        String line = "hello from day01 at " + System.currentTimeMillis() + "\n";
         Files.writeString(file, line, StandardCharsets.UTF_8);
         String readBack = Files.readString(file, StandardCharsets.UTF_8);
         System.out.print(readBack);
