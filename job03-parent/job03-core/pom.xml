@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>top.path</groupId>
+        <artifactId>job03-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- 实现模块：依赖 api；commons-lang3 必须为 compile，因 CoreApp（main）引用了 StringUtils -->
+    <artifactId>job03-core</artifactId>
+    <packaging>jar</packaging>
+    <name>job03-core</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>top.path</groupId>
+            <artifactId>job03-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!--
+          默认 compile：参与 main 编译与 exec:java 运行 classpath。
+          若写成 test：仅 src/test/java 可见，main 里用 StringUtils 会编译失败；exec:java 也不会带上该 jar。
+          与 job03-api 的对比：api 把 commons-lang3 设为 test，且 main 源码不引用它，只在测试里用。
+        -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <mainClass>learning.job03.core.CoreApp</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

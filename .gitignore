@@ -25,3 +25,5 @@ replay_pid*
 
 # Cursor (涉及隐私的文件)
 .cursor/
+
+target/

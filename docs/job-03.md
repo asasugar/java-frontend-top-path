@@ -35,11 +35,13 @@
 ```bash
 cd job03-parent
 mvn -q clean install
-mvn -q dependency:tree -pl job03-core
+mvn dependency:tree -pl job03-api
+mvn dependency:tree -pl job03-core
 ```
 
 ## 排错
 
+- **`job03-api` 下 `mvn exec:java` 报缺少 mainClass**：api 是 jar 类库，没有入口；在 **`job03-core`** 执行 `mvn -q exec:java`，或在父目录 `mvn -q -pl job03-core exec:java`。
 - **子模块找不到父 POM**：检查父 POM 的 `relativePath` 与目录层级。
 - **版本冲突**：用 `dependency:tree` 看传递依赖，必要时在父 `dependencyManagement` 里 **显式对齐版本**。
 
