@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: job04-app
+  profiles:
+    active: dev
+
+logging:
+  level:
+    root: INFO
+    learning.job04: DEBUG
