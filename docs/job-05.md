@@ -38,4 +38,9 @@ curl -s -X POST http://localhost:8080/api/... -H 'Content-Type: application/json
 - **校验不生效**：确认方法参数上有 **`@Valid`**，且 DTO 字段上有注解。
 - **返回 HTML 错误页**：请求头加 **`Accept: application/json`**，或全局配置 MVC 默认 JSON 错误。
 
+## 笔记
+
+- 卡点：只给 DTO 字段加约束还不够，`@RequestBody` 参数上也要加 `@Valid`。
+- 结论：把校验异常、业务异常和未捕获异常统一成固定 JSON 后，前端就能稳定按 `code`、`message`、`errors` 处理。
+
 **上一项**：[job-04.md](job-04.md)　**下一项**：[job-06.md](job-06.md)　**索引**：[jobs.md](jobs.md)
